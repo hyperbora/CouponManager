@@ -1,0 +1,16 @@
+/* 
+  Localizable.strings
+  CouponManager
+
+  Created by hyperbora on 2022/07/24.
+  
+*/
+"Edit" = "편집";
+"Coupon Folder" = "쿠폰 폴더";
+"recyclebin" = "휴지통";
+"List" = "목록";
+"Settings" = "설정";
+"Cancel" = "취소";
+"Save" = "저장";
+"New Folder" = "새로운 폴더";
+"Name" = "이름";

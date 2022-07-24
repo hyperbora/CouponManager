@@ -1,0 +1,16 @@
+/* 
+  Localizable.strings
+  CouponManager
+
+  Created by hyperbora on 2022/07/24.
+  
+*/
+"Edit" = "Edit";
+"Coupon Folder" = "Coupon Folder";
+"recyclebin" = "recyclebin";
+"List" = "List";
+"Settings" = "Settings";
+"Cancel" = "Cancel";
+"Save" = "Save";
+"New Folder" = "New Folder";
+"Name" = "Name";

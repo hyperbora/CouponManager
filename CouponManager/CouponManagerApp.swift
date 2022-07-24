@@ -10,11 +10,13 @@ import SwiftUI
 @main
 struct CouponManagerApp: App {
     let persistenceController = PersistenceController.shared
+    @StateObject var store = FolderStore()
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MainView()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
+                .environmentObject(store)
         }
     }
 }

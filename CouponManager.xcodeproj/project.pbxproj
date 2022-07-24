@@ -8,21 +8,38 @@
 
 /* Begin PBXBuildFile section */
 		22EFE531288CF32900C309F3 /* CouponManagerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22EFE530288CF32900C309F3 /* CouponManagerApp.swift */; };
-		22EFE533288CF32900C309F3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22EFE532288CF32900C309F3 /* ContentView.swift */; };
+		22EFE533288CF32900C309F3 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22EFE532288CF32900C309F3 /* MainView.swift */; };
 		22EFE535288CF32A00C309F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22EFE534288CF32A00C309F3 /* Assets.xcassets */; };
 		22EFE538288CF32A00C309F3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22EFE537288CF32A00C309F3 /* Preview Assets.xcassets */; };
 		22EFE53A288CF32A00C309F3 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22EFE539288CF32A00C309F3 /* Persistence.swift */; };
 		22EFE53D288CF32A00C309F3 /* CouponManager.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 22EFE53B288CF32A00C309F3 /* CouponManager.xcdatamodeld */; };
+		22EFE545288CF35800C309F3 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 22EFE547288CF35800C309F3 /* Localizable.strings */; };
+		22EFE54F288CF3F100C309F3 /* CouponModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22EFE54D288CF3F100C309F3 /* CouponModel.swift */; };
+		22EFE550288CF3F100C309F3 /* CouponFolderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22EFE54E288CF3F100C309F3 /* CouponFolderModel.swift */; };
+		22EFE555288CF42800C309F3 /* CouponFolderList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22EFE552288CF42800C309F3 /* CouponFolderList.swift */; };
+		22EFE556288CF42800C309F3 /* CouponFolderRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22EFE553288CF42800C309F3 /* CouponFolderRow.swift */; };
+		22EFE55A288CF45E00C309F3 /* FolderStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22EFE559288CF45E00C309F3 /* FolderStore.swift */; };
+		22EFE55D288D0EA500C309F3 /* UtilityExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22EFE55C288D0EA500C309F3 /* UtilityExtension.swift */; };
+		22EFE55F288D0EB700C309F3 /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22EFE55E288D0EB700C309F3 /* ViewExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		22EFE52D288CF32900C309F3 /* CouponManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CouponManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22EFE530288CF32900C309F3 /* CouponManagerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CouponManagerApp.swift; sourceTree = "<group>"; };
-		22EFE532288CF32900C309F3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		22EFE532288CF32900C309F3 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		22EFE534288CF32A00C309F3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		22EFE537288CF32A00C309F3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		22EFE539288CF32A00C309F3 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		22EFE53C288CF32A00C309F3 /* CouponManager.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CouponManager.xcdatamodel; sourceTree = "<group>"; };
+		22EFE546288CF35800C309F3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		22EFE548288CF36700C309F3 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Localizable.strings; sourceTree = "<group>"; };
+		22EFE54D288CF3F100C309F3 /* CouponModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CouponModel.swift; sourceTree = "<group>"; };
+		22EFE54E288CF3F100C309F3 /* CouponFolderModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CouponFolderModel.swift; sourceTree = "<group>"; };
+		22EFE552288CF42800C309F3 /* CouponFolderList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CouponFolderList.swift; sourceTree = "<group>"; };
+		22EFE553288CF42800C309F3 /* CouponFolderRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CouponFolderRow.swift; sourceTree = "<group>"; };
+		22EFE559288CF45E00C309F3 /* FolderStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FolderStore.swift; sourceTree = "<group>"; };
+		22EFE55C288D0EA500C309F3 /* UtilityExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilityExtension.swift; sourceTree = "<group>"; };
+		22EFE55E288D0EB700C309F3 /* ViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,8 +72,12 @@
 		22EFE52F288CF32900C309F3 /* CouponManager */ = {
 			isa = PBXGroup;
 			children = (
+				22EFE547288CF35800C309F3 /* Localizable.strings */,
 				22EFE530288CF32900C309F3 /* CouponManagerApp.swift */,
-				22EFE532288CF32900C309F3 /* ContentView.swift */,
+				22EFE54C288CF3D600C309F3 /* Models */,
+				22EFE551288CF41600C309F3 /* Views */,
+				22EFE558288CF44800C309F3 /* ViewModel */,
+				22EFE55B288D0E8300C309F3 /* Extensions */,
 				22EFE534288CF32A00C309F3 /* Assets.xcassets */,
 				22EFE539288CF32A00C309F3 /* Persistence.swift */,
 				22EFE53B288CF32A00C309F3 /* CouponManager.xcdatamodeld */,
@@ -71,6 +92,42 @@
 				22EFE537288CF32A00C309F3 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		22EFE54C288CF3D600C309F3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				22EFE54E288CF3F100C309F3 /* CouponFolderModel.swift */,
+				22EFE54D288CF3F100C309F3 /* CouponModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		22EFE551288CF41600C309F3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				22EFE532288CF32900C309F3 /* MainView.swift */,
+				22EFE552288CF42800C309F3 /* CouponFolderList.swift */,
+				22EFE553288CF42800C309F3 /* CouponFolderRow.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		22EFE558288CF44800C309F3 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				22EFE559288CF45E00C309F3 /* FolderStore.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		22EFE55B288D0E8300C309F3 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				22EFE55C288D0EA500C309F3 /* UtilityExtension.swift */,
+				22EFE55E288D0EB700C309F3 /* ViewExtension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -115,6 +172,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ko,
 			);
 			mainGroup = 22EFE524288CF32900C309F3;
 			productRefGroup = 22EFE52E288CF32900C309F3 /* Products */;
@@ -132,6 +190,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				22EFE538288CF32A00C309F3 /* Preview Assets.xcassets in Resources */,
+				22EFE545288CF35800C309F3 /* Localizable.strings in Resources */,
 				22EFE535288CF32A00C309F3 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -143,20 +202,40 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22EFE556288CF42800C309F3 /* CouponFolderRow.swift in Sources */,
+				22EFE555288CF42800C309F3 /* CouponFolderList.swift in Sources */,
 				22EFE53A288CF32A00C309F3 /* Persistence.swift in Sources */,
+				22EFE550288CF3F100C309F3 /* CouponFolderModel.swift in Sources */,
+				22EFE54F288CF3F100C309F3 /* CouponModel.swift in Sources */,
 				22EFE53D288CF32A00C309F3 /* CouponManager.xcdatamodeld in Sources */,
-				22EFE533288CF32900C309F3 /* ContentView.swift in Sources */,
+				22EFE55F288D0EB700C309F3 /* ViewExtension.swift in Sources */,
+				22EFE55D288D0EA500C309F3 /* UtilityExtension.swift in Sources */,
+				22EFE533288CF32900C309F3 /* MainView.swift in Sources */,
 				22EFE531288CF32900C309F3 /* CouponManagerApp.swift in Sources */,
+				22EFE55A288CF45E00C309F3 /* FolderStore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		22EFE547288CF35800C309F3 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				22EFE546288CF35800C309F3 /* en */,
+				22EFE548288CF36700C309F3 /* ko */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		22EFE53E288CF32A00C309F3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -217,6 +296,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
