@@ -25,9 +25,9 @@ extension Folder {
     var folderType: FolderType {
         switch self.type_ {
         case "recyclebin":
-            return FolderType.recyclebin
+            return .recyclebin
         default:
-            return FolderType.folder
+            return .folder
         }
     }
 }
@@ -40,7 +40,13 @@ extension FetchedResults where Result: Folder {
         
     }
     func addRecyclebin(context: NSManagedObjectContext) {
-        
+        let folder = Folder(context: context)
+        folder.id = UUID()
+        folder.name = "recyclebin".localized
+        folder.seq = 0
+        folder.type_ = "recyclebin"
+        folder.count_ = 0
+        try? context.save()
     }
 }
 
