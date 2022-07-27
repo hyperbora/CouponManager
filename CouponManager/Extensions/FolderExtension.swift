@@ -11,7 +11,7 @@ import CoreData
 
 extension Folder {
     var folderImageName: String {
-        if self.folderType == .recyclebin {
+        if self.type == .recyclebin {
             return "trash"
         } else {
             return "folder"
@@ -22,12 +22,21 @@ extension Folder {
             self.count_?.description ?? "0"
         }
     }
-    var folderType: FolderType {
-        switch self.type_ {
-        case "recyclebin":
-            return .recyclebin
-        default:
-            return .folder
+    var type: FolderType {
+        get {
+            switch self.type_ {
+            case "recyclebin":
+                return .recyclebin
+            default:
+                return .folder
+            }
+        }
+        set {
+            if newValue == .recyclebin {
+                self.type_ = "recyclebin"
+            } else {
+                self.type_ = "folder"
+            }
         }
     }
 }
@@ -44,9 +53,21 @@ extension FetchedResults where Result: Folder {
         folder.id = UUID()
         folder.name = "recyclebin".localized
         folder.seq = 0
-        folder.type_ = "recyclebin"
+        folder.type = .recyclebin
         folder.count_ = 0
         try? context.save()
+    }
+    func addFolder(folderName: String, context: NSManagedObjectContext) {
+        if let lastFolder = self.last {
+            let folder = Folder(context: context)
+            folder.id = UUID()
+            folder.name = folderName
+            folder.seq = lastFolder.seq
+            folder.type = .folder
+            folder.count_ = 0
+            lastFolder.seq = lastFolder.seq?.adding(1)
+            try? context.save()
+        }
     }
 }
 

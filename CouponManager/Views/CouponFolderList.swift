@@ -26,8 +26,8 @@ struct CouponFolderList: View {
                         CouponFolderRow(folder: folder)
                             .gesture(editMode == .active ? tap : nil)
                     }
-                    .moveDisabled(folder.folderType == .recyclebin)
-                    .deleteDisabled(folder.folderType == .recyclebin)
+                    .moveDisabled(folder.type == .recyclebin)
+                    .deleteDisabled(folder.type == .recyclebin)
                 }
                 .onDelete { indexSet in
                     folders.remove(atOffsets: indexSet, context: viewContext)
@@ -63,7 +63,7 @@ struct CouponFolderList: View {
             title: "New Folder".localized,
             text: $folderName,
             placeholder: "Name".localized) { text in
-                //                store.addFolder(folderName: text)
+                folders.addFolder(folderName: text, context: viewContext)
             }
     }
     
