@@ -10,16 +10,10 @@ import CoreData
 
 struct MainView: View {
     @Environment(\.managedObjectContext) private var viewContext
-    @EnvironmentObject var store: FolderStore
-
-    @FetchRequest(
-        sortDescriptors: [NSSortDescriptor(keyPath: \Item.timestamp, ascending: true)],
-        animation: .default)
-    private var items: FetchedResults<Item>
-
+    
     var body: some View {
         TabView {
-            CouponFolderList(store: store)
+            CouponFolderList()
                 .tabItem {
                     Image(systemName: "list.dash")
                     Text("List")
@@ -32,6 +26,7 @@ struct MainView: View {
         }
     }
 
+    /*
     private func addItem() {
         withAnimation {
             let newItem = Item(context: viewContext)
@@ -62,6 +57,7 @@ struct MainView: View {
             }
         }
     }
+    */
 }
 
 private let itemFormatter: DateFormatter = {
