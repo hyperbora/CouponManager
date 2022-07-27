@@ -1,9 +1,27 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="true" userDefinedModelVersionIdentifier="">
-    <entity name="Item" representedClassName="Item" syncable="YES" codeGenerationType="class">
-        <attribute name="timestamp" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="20086" systemVersion="21G72" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="YES" userDefinedModelVersionIdentifier="">
+    <entity name="Coupon" representedClassName="Coupon" syncable="YES" codeGenerationType="class">
+        <attribute name="code" optional="YES" attributeType="String"/>
+        <attribute name="createdDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="endDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="image" optional="YES" attributeType="Binary"/>
+        <attribute name="seq" optional="YES" attributeType="Decimal" defaultValueString="0.0"/>
+        <attribute name="startDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="updatedDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="used" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <relationship name="folder" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Folder" inverseName="coupons" inverseEntity="Folder"/>
+    </entity>
+    <entity name="Folder" representedClassName="Folder" syncable="YES" codeGenerationType="class">
+        <attribute name="count_" optional="YES" attributeType="Decimal" defaultValueString="0.0"/>
+        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="seq" optional="YES" attributeType="Decimal" defaultValueString="0.0"/>
+        <attribute name="type_" optional="YES" attributeType="String"/>
+        <relationship name="coupons" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Coupon" inverseName="folder" inverseEntity="Coupon"/>
     </entity>
     <elements>
-        <element name="Item" positionX="-63" positionY="-18" width="128" height="44"/>
+        <element name="Coupon" positionX="-279.3782958984375" positionY="43.264404296875" width="128" height="28"/>
+        <element name="Folder" positionX="-27" positionY="27" width="128" height="119"/>
     </elements>
 </model>

@@ -21,6 +21,7 @@
 		22EFE55A288CF45E00C309F3 /* FolderStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22EFE559288CF45E00C309F3 /* FolderStore.swift */; };
 		22EFE55D288D0EA500C309F3 /* UtilityExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22EFE55C288D0EA500C309F3 /* UtilityExtension.swift */; };
 		22EFE55F288D0EB700C309F3 /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22EFE55E288D0EB700C309F3 /* ViewExtension.swift */; };
+		22EFE561288EDAB700C309F3 /* FolderExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22EFE560288EDAB600C309F3 /* FolderExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		22EFE559288CF45E00C309F3 /* FolderStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FolderStore.swift; sourceTree = "<group>"; };
 		22EFE55C288D0EA500C309F3 /* UtilityExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilityExtension.swift; sourceTree = "<group>"; };
 		22EFE55E288D0EB700C309F3 /* ViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
+		22EFE560288EDAB600C309F3 /* FolderExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +126,7 @@
 		22EFE55B288D0E8300C309F3 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				22EFE560288EDAB600C309F3 /* FolderExtension.swift */,
 				22EFE55C288D0EA500C309F3 /* UtilityExtension.swift */,
 				22EFE55E288D0EB700C309F3 /* ViewExtension.swift */,
 			);
@@ -213,6 +216,7 @@
 				22EFE533288CF32900C309F3 /* MainView.swift in Sources */,
 				22EFE531288CF32900C309F3 /* CouponManagerApp.swift in Sources */,
 				22EFE55A288CF45E00C309F3 /* FolderStore.swift in Sources */,
+				22EFE561288EDAB700C309F3 /* FolderExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
