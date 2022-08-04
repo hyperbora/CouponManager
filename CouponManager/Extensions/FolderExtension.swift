@@ -43,10 +43,18 @@ extension Folder {
 
 extension FetchedResults where Result: Folder {
     func remove(atOffsets: IndexSet, context: NSManagedObjectContext) {
-        
+        atOffsets.map { self[$0] }.forEach(context.delete)
+        try? context.save()
     }
     func move(fromOffsets: IndexSet, toOffset: Int, context: NSManagedObjectContext) {
-        
+        if toOffset < self.count {
+            var copyArray = self.map{ $0 }
+            copyArray.move(fromOffsets: fromOffsets, toOffset: toOffset)
+            for i in 0..<copyArray.count {
+                copyArray[i].seq = NSDecimalNumber(value: i)
+            }
+            try? context.save()
+        }
     }
     func addRecyclebin(context: NSManagedObjectContext) {
         let folder = Folder(context: context)

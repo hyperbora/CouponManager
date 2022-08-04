@@ -30,10 +30,12 @@ struct CouponFolderList: View {
                     .deleteDisabled(folder.type == .recyclebin)
                 }
                 .onDelete { indexSet in
-                    folders.remove(atOffsets: indexSet, context: viewContext)
+                    withAnimation {
+                        folders.remove(atOffsets: indexSet, context: viewContext)
+                    }
                 }
                 .onMove { indexSet, newOffset in
-                    if newOffset < folders.count - 1 {
+                    withAnimation {
                         folders.move(fromOffsets: indexSet, toOffset: newOffset, context: viewContext)
                     }
                 }
