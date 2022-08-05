@@ -47,14 +47,21 @@ extension FetchedResults where Result: Folder {
         try? context.save()
     }
     func move(fromOffsets: IndexSet, toOffset: Int, context: NSManagedObjectContext) {
-        if toOffset < self.count {
-            var copyArray = self.map{ $0 }
-            copyArray.move(fromOffsets: fromOffsets, toOffset: toOffset)
-            for i in 0..<copyArray.count {
-                copyArray[i].seq = NSDecimalNumber(value: i)
+        var copyArray = self.map{ $0 }
+        copyArray.move(fromOffsets: fromOffsets, toOffset: toOffset)
+        let sortedArray = copyArray.enumerated().sorted {
+            if $0.element.type == .recyclebin {
+                return false
             }
-            try? context.save()
+            if $1.element.type == .recyclebin {
+                return true
+            }
+            return $0.offset < $1.offset
+        }.map { $0.element }
+        for i in 0..<sortedArray.count {
+            sortedArray[i].seq = NSDecimalNumber(value: i)
         }
+        try? context.save()
     }
     func addRecyclebin(context: NSManagedObjectContext) {
         let folder = Folder(context: context)
