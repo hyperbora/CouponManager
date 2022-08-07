@@ -23,7 +23,7 @@ struct CouponFolderList: View {
             List {
                 ForEach(folders) { folder in
                     NavigationLink(destination: Text("detail")) {
-                        CouponFolderRow(folder: folder)
+                        CouponFolderRow(folder: folder, edited: editMode == .active)
                             .gesture(editMode == .active ? tap : nil)
                     }
                     .moveDisabled(folder.type == .recyclebin)
