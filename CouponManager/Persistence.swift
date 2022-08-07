@@ -14,9 +14,18 @@ struct PersistenceController {
     static var preview: PersistenceController = {
         let result = PersistenceController(inMemory: true)
         let viewContext = result.container.viewContext
-        for _ in 0..<10 {
-            let newItem = Item(context: viewContext)
-            newItem.timestamp = Date()
+        let size = 10
+        for i in 0..<size {
+            let newItem = Folder(context: viewContext)
+            newItem.id = UUID()
+            newItem.name = "New Folder \(i)"
+            newItem.seq = NSDecimalNumber(value: i)
+            newItem.count_ = 0
+            if i == size - 1 {
+                newItem.type = .folder
+            } else {
+                newItem.type = .recyclebin
+            }
         }
         do {
             try viewContext.save()

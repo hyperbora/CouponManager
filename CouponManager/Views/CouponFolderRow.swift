@@ -10,36 +10,29 @@ import SwiftUI
 
 struct CouponFolderRow: View {
     @ObservedObject var folder: Folder
+    let edited: Bool
     
     var body: some View {
         HStack {
             Image(systemName: folder.folderImageName).frame(width: 20, height: 20)
-            Text(folder.name ?? "")
+            Text(folder.name ?? "No Name".localized)
             Spacer()
+            if folder.type == .folder && edited {
+                Button {
+                    print("pressed")
+                } label: {
+                    Image(systemName: "info.circle")
+                }
+            }
             Text(folder.count)
         }
     }
 }
 
-//struct CouponFolderRow_Previews: PreviewProvider {
-//    static var store = getStore()
-//    static func getStore() -> FolderStore {
-//        let store = FolderStore()
-//        store.addFolder(folderName: "Amazon")
-//        store.addFolder(folderName: "Ebay")
-//        return store
-//    }
-//
-//    static var previews: some View {
-//
-//        Group {
-//            if let name = store.folders.first?.folderName, let imageName = store.folders.first?.folderType.description, let count =
-//                store.folders.first?.count {
-//                CouponFolderRow(name: name, folderImageName: imageName, count: String(count))
-//            }
-//            if let name = store.folders.last?.folderName, let imageName = store.folders.last?.folderType.description, let count = store.folders.last?.count {
-//                CouponFolderRow(name: name, folderImageName: imageName, count: String(count))
-//            }
-//        }.previewLayout(.fixed(width: 300, height: 70))
-//    }
-//}
+struct CouponFolderRow_Previews: PreviewProvider {
+    static var previews: some View {
+        Group {
+            EmptyView()
+        }.previewLayout(.fixed(width: 300, height: 70))
+    }
+}
